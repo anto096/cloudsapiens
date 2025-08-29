@@ -200,8 +200,8 @@ h6,
     }
 
     .sticky-top.navbar .navbar-brand h1 {
-        /* color: var(--primary); */
-        color: #8d9cbb;
+        color: var(--primary);
+        /* color: #8d9cbb; */
     }
 
     .navbar .navbar-nav .nav-item .dropdown-menu {
