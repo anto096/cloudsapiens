@@ -152,6 +152,23 @@ h6,
     max-height: 45px;
 }
 
+.mvv-img-center{
+    display: flex;
+    justify-content: center;
+}
+
+.mvv-img{
+    max-height: 360px;
+}
+
+.cloud-float {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar {
         position: relative;
@@ -176,8 +193,8 @@ h6,
     }
 
     .navbar .navbar-brand h1 {
-        /* color: var(--primary); */
-        color: #8d9cbb;
+        color: var(--primary);
+        /* color: #8d9cbb; */
     }
 
     .navbar-light .navbar-brand img {

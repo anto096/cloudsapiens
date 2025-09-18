@@ -45,9 +45,9 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="" class="navbar-brand cloud-float p-0">
                     <h1 class="m-0">CloudSapiens</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                    <img src="img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -158,9 +158,9 @@
         <!-- Overview Start -->
         <div class="container-xxl bg-light my-6 py-5" id="overview">
             <div class="container">
-                <div class="row g-5 py-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="img/overview-one.png">
+                <div class="row g-5 py-2 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp mvv-img-center" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded mvv-img" src="img/overview-one.png">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="d-flex align-items-center mb-4">
@@ -174,7 +174,7 @@
                         <p class="mb-0"><i class="fa fa-check-circle text-primary me-3"></i>Transformation</p>
                     </div>
                 </div>
-                <div class="row g-5 py-5 align-items-center flex-column-reverse flex-lg-row">
+                <div class="row g-5 py-2 align-items-center flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="mb-0">Our Vision</h1>
@@ -186,13 +186,13 @@
                         <p><i class="fa fa-check-circle text-primary me-3"></i>Opportunity</p>
                         <p class="mb-0"><i class="fa fa-check-circle text-primary me-3"></i>Resilience</p>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="img/overview-two.png">
+                    <div class="col-lg-6 wow fadeInUp mvv-img-center" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded mvv-img" src="img/overview-two.png">
                     </div>
                 </div>
-                <div class="row g-5 py-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="img/overview-three.png">
+                <div class="row g-5 py-2 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp mvv-img-center" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded mvv-img" src="img/overview-three.png">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="d-flex align-items-center mb-4">
@@ -212,7 +212,7 @@
 
 
         <!-- Advanced Feature Start -->
-        <div class="container-xxl py-6" id="features">
+        <div class="container-xxl py-2" id="features">
             <div class="container">
                 <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Services</h1>
@@ -455,37 +455,39 @@
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <form>
+                        <form id="messageForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input required="true" name="msgFullName" type="text" class="form-control" id="name" placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input required="true" name="msgEmail" type="email" class="form-control" id="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input required="true" name="msgSubject" type="text" class="form-control" id="subject" placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                        <textarea required="true" name="msgContent" class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button disabled="true" class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
+                        <p id="successContact" class="mt-3 text-success" style="display: none;">Thank you for reaching out — we’ll get back to you shortly!</p>
+                        <p id="failureContact" class="mt-3 text-danger" style="display: none;">Something went wrong - try again later !</p>
                     </div>
                 </div>
             </div>
@@ -529,8 +531,12 @@
                         <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
                         <p>Subscribe to our newsletter for updates, insights, and stories delivered directly to you.</p>
                         <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                            <form id="subscriptionForm">
+                                <input name="mailId" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;" required="true">
+                                <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                            </form>
+                            <p id="subSuccess" class="mt-3 text-white" style="display: none;">Thank you for subscribing!</p>
+                            <p id="subFailure" class="mt-3 text-white" style="display: none;">Something went wrong - try again later !</p>
                         </div>
                     </div>
                 </div>
@@ -575,6 +581,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
