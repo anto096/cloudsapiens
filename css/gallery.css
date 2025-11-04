@@ -1,0 +1,32 @@
+.gallery img {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11,42,73,0.08);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* container background and centering */
+.glightbox-container {
+background-color: rgba(10,20,30,0.95) !important;
+}
+
+/* default image rules for consistent behavior */
+.gslide-image img {
+object-fit: contain !important;   /* don't crop */
+display: block;
+margin: 0 auto;
+transition: max-width .25s ease, max-height .25s ease;
+}
+
+/* small safety caps (will be overridden in JS per-orientation) */
+.gslide-image img.portrait {
+max-height: 95vh !important;
+width: auto !important;
+}
+.gslide-image img.landscape {
+max-width: 95vw !important;
+height: auto !important;
+}
